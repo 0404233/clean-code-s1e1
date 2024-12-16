@@ -1,8 +1,8 @@
 // Get references to the DOM elements
 var taskInput = document.getElementById("new-task"); // Add a new task.
 var addButton = document.getElementsByTagName("button")[0]; // First button
-var incompleteTaskHolder = document.getElementById("main__incomplete-task"); // ul of incomplete tasks
-var completedTasksHolder = document.getElementById("main__completed-tasks"); // ul of completed tasks
+var incompleteTaskHolder = document.querySelector(".main__incomplete-task"); // ul of incomplete tasks
+var completedTasksHolder = document.querySelector(".main__completed-tasks"); // ul of completed tasks
 
 // Create a new task list item
 var createNewTaskElement = function (taskString) {
@@ -41,7 +41,6 @@ var createNewTaskElement = function (taskString) {
 
 // Add a new task
 var addTask = function () {
-  console.log("Add Task...");
   if (!taskInput.value) return;
 
   var listItem = createNewTaskElement(taskInput.value);
@@ -52,7 +51,6 @@ var addTask = function () {
 
 // Edit an existing task
 var editTask = function () {
-  console.log("Edit Task...");
   var listItem = this.parentNode;
   var editInput = listItem.querySelector('input[type=text]');
   var label = listItem.querySelector("label");
@@ -73,7 +71,6 @@ var editTask = function () {
 
 // Delete a task
 var deleteTask = function () {
-  console.log("Delete Task...");
   var listItem = this.parentNode;
   var ul = listItem.parentNode;
   ul.removeChild(listItem); // Remove the list item
@@ -81,7 +78,6 @@ var deleteTask = function () {
 
 // Mark a task as completed
 var taskCompleted = function () {
-  console.log("Complete Task...");
   var listItem = this.parentNode;
   completedTasksHolder.appendChild(listItem);
   bindTaskEvents(listItem, taskIncomplete);
@@ -89,7 +85,6 @@ var taskCompleted = function () {
 
 // Mark a task as incomplete
 var taskIncomplete = function () {
-  console.log("Incomplete Task...");
   var listItem = this.parentNode;
   incompleteTaskHolder.appendChild(listItem);
   bindTaskEvents(listItem, taskCompleted);
@@ -97,7 +92,6 @@ var taskIncomplete = function () {
 
 // Bind events to list items' children
 var bindTaskEvents = function (taskListItem, checkBoxEventHandler) {
-  console.log("Bind List Item Events...");
   var checkBox = taskListItem.querySelector("input[type=checkbox]");
   var editButton = taskListItem.querySelector(".edit-btn");
   var deleteButton = taskListItem.querySelector(".delete-btn");
