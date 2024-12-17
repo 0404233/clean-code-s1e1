@@ -58,11 +58,11 @@ h3 {
 }
 
 input,
-.btn {
+button {
   outline: none;
 }
 
-.btn {
+button {
   background: none;
   border: 0px;
   color: #888;
@@ -72,7 +72,7 @@ input,
   cursor: pointer;
 }
 
-.btn:hover {
+.button:hover {
   color: #3a3a3a;
 }
 /* Heading */
@@ -144,13 +144,13 @@ li > input[type="text"] {
   width: 226px;
 }
 
-.btn.delete-btn img {
+button.delete-btn img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-.btn.delete-btn img:hover {
+button.delete-btn img:hover {
   transform: rotateZ(0);
 }
 
