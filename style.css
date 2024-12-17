@@ -38,8 +38,13 @@ body {
   flex-grow: 1;
 }
 
-.task-row-wrapper {
+#new-task-form {
   display: flex;
+  flex-wrap: wrap;
+}
+
+#new-task-form label {
+  width: 100%;
 }
 
 ul {
@@ -53,11 +58,11 @@ h3 {
 }
 
 input,
-button {
+.btn {
   outline: none;
 }
 
-button {
+.btn {
   background: none;
   border: 0px;
   color: #888;
@@ -67,7 +72,7 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.btn:hover {
   color: #3a3a3a;
 }
 /* Heading */
@@ -139,13 +144,13 @@ li > input[type="text"] {
   width: 226px;
 }
 
-button.delete-btn img {
+.btn.delete-btn img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-button.delete-btn img:hover {
+.btn.delete-btn img:hover {
   transform: rotateZ(0);
 }
 
