@@ -1,5 +1,5 @@
 // Get references to the DOM elements
-var taskInput = document.querySelector(".main__add-item_new-task"); // Add a new task.
+var taskInput = document.querySelector(".main__add-item__new-task"); // Add a new task.
 var addButton = document.getElementsByTagName("button")[0]; // First button
 var incompleteTaskHolder = document.querySelector(".tasks-list__incomplited-tasks"); // ul of incomplete tasks
 var completedTasksHolder = document.querySelector(".tasks-list__completed-tasks"); // ul of completed tasks

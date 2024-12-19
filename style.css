@@ -70,12 +70,12 @@ body {
   text-transform: uppercase;
 }
 
-.main__add-item_form {
+.main__add-item__form {
   display: flex;
   flex-wrap: wrap;
 }
 
-.main__add-item_new-task {
+.main__add-item__new-task {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
@@ -95,7 +95,7 @@ body {
   color: #3a3a3a;
 }
 
-.main__todo_header {
+.main__todo__header {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -144,7 +144,7 @@ body {
   transform: rotateZ(0);
 }
 
-.main__completed-tasks_header {
+.main__completed-tasks__header {
   font-family: Lato, sans-serif;
   list-style: none;
   color: #333;

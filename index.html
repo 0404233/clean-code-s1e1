@@ -17,20 +17,20 @@
   <main class="main">
     <section aria-labelledby="Add item" class="main__add-item">
       <h1 class="main__add-item_header">Add Item</h1>
-      <form class="main__add-item_form">
-        <input class="main__add-item_new-task" type="text" aria-label="New task">
-        <button type="button" class="main__add-item_btn btn">Add</button>
+      <form class="main__add-item__form">
+        <input class="main__add-item__new-task" type="text" aria-label="New task">
+        <button type="button" class="main__add-item__btn btn">Add</button>
       </form>
     </section>
     <section aria-labelledby="Todo tasks" class="main__todo">
-      <h2 class="main__todo_header">Todo</h2>
+      <h2 class="main__todo__header">Todo</h2>
       <ul class="tasks-list__incomplited-tasks tasks-list">
         <li class="tasks-list__task">
           <input type="checkbox" id="Pay Bills">
-          <label for="Pay Bills" class="main__todo_incomplete_task">Pay Bills</label>
+          <label for="Pay Bills">Pay Bills</label>
           <input type="text" aria-label="Edit task">
-          <button class="main__todo_incomplete_edit-btn edit-btn btn" aria-label="Edit task button">Edit</button>
-          <button class="main__todo_incomplete_delete-btn delete-btn btn" aria-label="Delete task button">
+          <button class="edit-btn btn" aria-label="Edit task button">Edit</button>
+          <button class="delete-btn btn" aria-label="Delete task button">
             <img src="./remove.svg" alt="Delete" class="delete-btn__img">
           </button>
         </li>
@@ -46,11 +46,11 @@
       </ul>
     </section>
     <section aria-labelledby="main__completed-tasks">
-      <h2 class="main__completed-tasks_header">Completed</h2>
+      <h2 class="main__completed-tasks__header">Completed</h2>
       <ul class="tasks-list__completed-tasks tasks-list">
         <li class="tasks-list__task">
           <input type="checkbox" id="see-doctor" checked>
-          <label for="see-doctor" class="tasks-list__task_content" aria-colcount="complited task">See the Doctor</label>
+          <label for="see-doctor" aria-colcount="complited task">See the Doctor</label>
           <input type="text" aria-label="Edit task">
           <button class="edit-btn btn" aria-label="Edit task">Edit</button>
           <button class="delete-btn btn" aria-label="Delete task">
