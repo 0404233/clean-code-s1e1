@@ -1,8 +1,8 @@
 // Get references to the DOM elements
-var taskInput = document.getElementById("new-task"); // Add a new task.
+var taskInput = document.querySelector(".main__add-item_new-task"); // Add a new task.
 var addButton = document.getElementsByTagName("button")[0]; // First button
-var incompleteTaskHolder = document.querySelector(".main__incomplete-task"); // ul of incomplete tasks
-var completedTasksHolder = document.querySelector(".main__completed-tasks"); // ul of completed tasks
+var incompleteTaskHolder = document.querySelector(".tasks-list__incomplited-tasks"); // ul of incomplete tasks
+var completedTasksHolder = document.querySelector(".tasks-list__completed-tasks"); // ul of completed tasks
 
 // Create a new task list item
 var createNewTaskElement = function (taskString) {
@@ -18,18 +18,21 @@ var createNewTaskElement = function (taskString) {
 
   // Set properties
   checkBox.type = "checkbox";
+  checkBox.id = taskString;
   label.innerText = taskString;
+  label.setAttribute('for', taskString);
   label.className = "task";
   editInput.type = "text";
   editInput.className = "task";
   editButton.innerText = "Edit";
-  editButton.className = "edit-btn";
-  deleteButton.className = "delete-btn";
+  editButton.className = "edit-btn btn";
+  deleteButton.className = "delete-btn btn";
   deleteButtonImg.src = "./remove.svg";
   deleteButtonImg.alt = "Delete";
   deleteButton.appendChild(deleteButtonImg);
 
   // Append elements to the list item
+  listItem.className = 'tasks-list__task';
   listItem.appendChild(checkBox);
   listItem.appendChild(label);
   listItem.appendChild(editInput);
