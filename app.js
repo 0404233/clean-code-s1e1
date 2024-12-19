@@ -1,8 +1,8 @@
 // Get references to the DOM elements
-var taskInput = document.querySelector(".main__add-item__new-task"); // Add a new task.
+var taskInput = document.querySelector(".add-item__form__new-task"); // Add a new task.
 var addButton = document.getElementsByTagName("button")[0]; // First button
-var incompleteTaskHolder = document.querySelector(".tasks-list__incomplited-tasks"); // ul of incomplete tasks
-var completedTasksHolder = document.querySelector(".tasks-list__completed-tasks"); // ul of completed tasks
+var incompleteTaskHolder = document.querySelector(".tasks-list_incomplited"); // ul of incomplete tasks
+var completedTasksHolder = document.querySelector(".tasks-list_completed"); // ul of completed tasks
 
 // Create a new task list item
 var createNewTaskElement = function (taskString) {
@@ -23,7 +23,7 @@ var createNewTaskElement = function (taskString) {
   label.setAttribute('for', taskString);
   label.className = "task";
   editInput.type = "text";
-  editInput.className = "task";
+  editInput.className = "input-field";
   editButton.innerText = "Edit";
   editButton.className = "edit-btn btn";
   deleteButton.className = "delete-btn btn";
@@ -59,7 +59,7 @@ var editTask = function () {
   var label = listItem.querySelector("label");
   var editBtn = this;
 
-  var containsClass = listItem.classList.contains("main__incomplete-task_edit-mode");
+  var containsClass = listItem.classList.contains("edit-mode");
 
   if (containsClass) {
     label.innerText = editInput.value;
@@ -69,7 +69,7 @@ var editTask = function () {
     editBtn.innerText = "Save";
   }
 
-  listItem.classList.toggle("main__incomplete-task_edit-mode");
+  listItem.classList.toggle("edit-mode");
 };
 
 // Delete a task
