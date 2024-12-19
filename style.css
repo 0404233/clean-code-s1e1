@@ -156,7 +156,7 @@ body {
   text-transform: uppercase;
 }
 
-.tasks-list__completed-tasks .tasks-list__task {
+.tasks-list__completed-tasks .tasks-list__task .tasks-list__task_content {
   text-decoration: line-through;
   color: #888;
 }
